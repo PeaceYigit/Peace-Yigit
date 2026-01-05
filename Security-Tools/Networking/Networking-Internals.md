@@ -1,74 +1,88 @@
 # 🌐 Networking Internals
 
-> Understanding networking is foundational to cybersecurity.  
-> Tools are meaningless without knowing how data actually moves.
+> Understanding networking fundamentals is the foundation of all cybersecurity skills.  
+> Tools are useless without knowing how data actually moves across networks.
 
-This document summarizes my understanding of core networking concepts from a security perspective.
+This document details my understanding of network architecture, protocols, and the security implications behind them.
 
 ---
 
 ## 🎯 Why Networking Matters
 
 Every security issue exists because:
-- Data is transmitted
+- Data is transmitted across a network
 - Protocols make assumptions
 - Trust boundaries are crossed
 
-Understanding networking allows me to:
-- Interpret scan results correctly
+Strong networking knowledge allows me to:
+- Accurately interpret scanning results
 - Identify misconfigurations
-- Think like both attacker and defender
+- Think from both attacker and defender perspectives
+- Troubleshoot and harden systems effectively
 
 ---
 
-## 🧱 OSI & TCP/IP Models
+## 🧱 Core Networking Models
 
 ### OSI Model (Conceptual)
-1. Physical
-2. Data Link
-3. Network
-4. Transport
-5. Session
-6. Presentation
-7. Application
+1. **Physical:** Cables, radio waves, electrical signals
+2. **Data Link:** Ethernet, MAC addresses
+3. **Network:** IP, routing, addressing
+4. **Transport:** TCP/UDP, ports, flow control
+5. **Session:** Connection management
+6. **Presentation:** Encoding, compression
+7. **Application:** HTTP, DNS, FTP
 
 ### TCP/IP Model (Practical)
-- Network Interface
-- Internet
-- Transport
-- Application
+- **Network Interface**
+- **Internet**
+- **Transport**
+- **Application**
 
-Security issues often occur at **layer boundaries**.
+> Security vulnerabilities often occur at **layer boundaries**, where trust assumptions fail.
 
 ---
 
-## 🔄 Core Protocols
+## 🔄 Core Protocols & Security Considerations
 
 ### TCP vs UDP
-- TCP: Reliable, stateful, slower
-- UDP: Fast, stateless, less predictable
+- **TCP:** Reliable, connection-oriented; easier to analyze, stateful firewalls
+- **UDP:** Connectionless; often used in DNS, VoIP, and streaming; harder to detect attacks
 
 ### IP
 - Routing and addressing
-- Trust assumptions in internal networks
+- Misconfigurations can expose internal networks
+- Source IP spoofing implications
 
 ### DNS
-- Name resolution
-- Frequent source of misconfiguration and information leakage
+- Critical for name resolution
+- Common source of data leakage
+- Often targeted in subdomain enumeration
 
 ### HTTP / HTTPS
 - Stateless communication
-- Headers and methods define behavior
+- Headers, cookies, methods define behavior
+- Security considerations: input validation, session management, TLS validation
 
 ---
 
-## 🧠 Security Perspective
+## 🛡️ Security Mindset
 
-Key questions I always ask:
-- Is this traffic encrypted?
-- Is authentication implicit or explicit?
-- Where does trust begin and end?
-- What happens if input is unexpected?
+I always ask:
+- Is the traffic encrypted?
+- What are implicit trust assumptions?
+- Where could packets be intercepted or altered?
+- How do layer boundaries enforce or break security?
+
+---
+
+## 📚 Advanced Concepts I Study
+
+- VLAN segmentation and isolation
+- NAT traversal and firewall rules
+- TCP/IP fingerprinting and anomaly detection
+- Traffic analysis with Wireshark / tcpdump
+- IPv6 challenges and misconfigurations
 
 ---
 
@@ -79,4 +93,4 @@ Networking knowledge:
 - Reduces false assumptions
 - Strengthens root-cause analysis
 
-Security starts with understanding the wire.
+> Understanding how the wire works is the first step in mastering cybersecurity.
