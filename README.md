@@ -16,13 +16,5 @@ I am a self-taught Cybersecurity researcher focused on Penetration Testing and N
 - **Networking:** TCP/IP, DNS, VPNs, Firewall Configuration.
 - **Scripting:** Bash, Python (Automation scripts).
 
-## 📁 Repository Structure
-- [CTF-Writeups](./CTF-Writeups) - Detailed walkthroughs of machines I've pwned.
-- [Security-Tools](./Security-Tools) - Documentation and guides on how to use industry-standard tools.
-- [Lab-Config](./Lab-Config) - How I set up my home hacking laboratory.
-
----
-
-
 
 Mail: peaceyigit@protonmail.ch
